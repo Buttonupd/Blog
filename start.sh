@@ -1,0 +1,3 @@
+MAIL_USERNAME = 'Dankariuki0101@gmail.com'
+MAIL_PASSWORD= ''
+SECRET_KEY = 'LET IT BEGIN'
