@@ -1,3 +1,3 @@
-MAIL_USERNAME = 'Dankariuki0101@gmail.com'
-MAIL_PASSWORD= ''
+MAIL_USERNAME = 'blogbuttonup@gmail.com'
+MAIL_PASSWORD= 'znteeiyactwnrlik'
 SECRET_KEY = 'LET IT BEGIN'
