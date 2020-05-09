@@ -7,6 +7,7 @@ from .forms import EditProfileForm, EditProfileAdminForm, PostForm, \
     CommentForm
 from .. import db
 from ..models import Permission, Role, User, Post, Comment
+from app.request import get
 from ..decorators import admin_required, permission_required
 
 @main.after_app_request
@@ -19,7 +20,13 @@ def after_request(response):
                 query.context))
     return response
 
+@main.route('/')
+def get_quote():
+    quote = get('quote')
+    return render_template('index.html', quote=quote)
 
+
+        
 @main.route('/', methods=['GET', 'POST'])
 def index():
     form = PostForm()
