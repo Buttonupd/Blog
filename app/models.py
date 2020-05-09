@@ -6,7 +6,7 @@ from markdown import markdown
 import bleach
 from flask import current_app, request, url_for
 from flask_login import UserMixin, AnonymousUserMixin
-from wtforms import ValidationError
+from app.exceptions import ValidationError
 from . import db, login_manager
 
 class Permission:
