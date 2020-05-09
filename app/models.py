@@ -4,7 +4,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from markdown import markdown
 import bleach
-#from itsdangerous import URLSafeTimedSerializer as Serializer
 from flask import current_app, request, url_for
 from flask_login import UserMixin, AnonymousUserMixin
 from wtforms import ValidationError
