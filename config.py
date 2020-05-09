@@ -3,7 +3,6 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 
 class Config:
-    SECURITY_PASSWORD_SALT='nULLNONE'
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string'
     SSL_DISABLE = False
     SQLALCHEMY_COMMIT_ON_TEARDOWN = True
@@ -41,7 +40,7 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
-   SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL')
 
 
     @classmethod
