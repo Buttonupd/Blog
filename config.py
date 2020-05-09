@@ -41,7 +41,7 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
-    # SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://root:buttonupd@localhost/blog'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://root:buttonupd@localhost/blog'
 
     @classmethod
     def init_app(cls, app):
