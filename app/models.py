@@ -29,7 +29,7 @@ class Role(db.Model):
         roles = {
             'User': (Permission.FOLLOW |
                      Permission.COMMENT |
-                     Permission.WRITE_ARTICLES, True),
+                     Permission.WRITE_ARTICLES, False),
             'Moderator': (Permission.FOLLOW |
                           Permission.COMMENT |
                           Permission.WRITE_ARTICLES |
