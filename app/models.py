@@ -29,11 +29,11 @@ class Role(db.Model):
         roles = {
             'User': (Permission.FOLLOW |
                      Permission.COMMENT |
-                     Permission.WRITE_ARTICLES, False),
+                     Permission.WRITE_ARTICLES, True),
             'Moderator': (Permission.FOLLOW |
                           Permission.COMMENT |
                           Permission.WRITE_ARTICLES |
-                          Permission.MODERATE_COMMENTS, False),
+                          Permission.MODERATE_COMMENTS, True),
             'Administrator': (0xff, False)
         }
         for r in roles:
