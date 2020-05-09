@@ -20,10 +20,10 @@ def after_request(response):
                 query.context))
     return response
 
-@main.route('/')
-def get_quote():
-    quote = get('quote')
-    return render_template('index.html', quote=quote)
+# @main.route('/')
+# def get_quote():
+#     quote = get('quote')
+#     return render_template('index.html', quote=quote)
 
 
         
