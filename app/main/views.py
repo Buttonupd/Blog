@@ -5,7 +5,6 @@ from . import main
 from .forms import EditProfileForm, EditProfileAdminForm, PostForm, CommentForm
 from .. import db
 from ..models import Permission, Role, User, Post, Comment
-from app.request import get_quotes
 from ..decorators import admin_required, permission_required
 
 @main.after_app_request

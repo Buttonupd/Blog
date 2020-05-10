@@ -5,10 +5,11 @@
 {% block title %}Blogged{% endblock %}
 
 {% block page_content %}
+
 <div class="page-header">
-    <p> {{quote.quote}} </p>
+   
     <h1>Welcome, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}There{% endif %}!</h1>
-    <p> {{quote.author}} </p>
+    
 </div>
 <div>
     {% if current_user.can(Permission.WRITE_ARTICLES) %}
@@ -21,8 +22,9 @@
        {% if current_user.is_authenticated %}
        <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_followed') }}">Followers</a></li>
        {% endif %}
+       <li>{% include '_posts.html' %}</li>
    </ul>
-   {% include '_posts.html' %}
+   
 </div>
 {% if pagination %}
 <div class="pagination">
