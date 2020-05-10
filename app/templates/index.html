@@ -11,19 +11,23 @@
     <h1>Welcome, {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}There{% endif %}!</h1>
     
 </div>
+
+<div class="post-tabs">
+   <ul class="nav nav-tabs">
+       
+       <li{% if not show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_all') }}">All</a></li>
+       {% if current_user.is_authenticated %}
 <div>
-    {% if current_user.can(Permission.WRITE_ARTICLES) %}
+    {% if current_user %}
     {{ wtf.quick_form(form) }}
     {% endif %}
 </div>
-<div class="post-tabs">
-   <ul class="nav nav-tabs">
-       <li{% if not show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_all') }}">All</a></li>
-       {% if current_user.is_authenticated %}
+
        <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_followed') }}">Followers</a></li>
        {% endif %}
    </ul>
-   {% include '_posts.html' %}
+   {% include '_posts.html' %}{% include '_comments.html' %}
+   
 </div>
 {% if pagination %}
 <div class="pagination">
