@@ -22,9 +22,8 @@
        {% if current_user.is_authenticated %}
        <li{% if show_followed %} class="active"{% endif %}><a href="{{ url_for('.show_followed') }}">Followers</a></li>
        {% endif %}
-       <li>{% include '_posts.html' %}</li>
    </ul>
-   
+   {% include '_posts.html' %}
 </div>
 {% if pagination %}
 <div class="pagination">
