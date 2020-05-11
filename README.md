@@ -10,9 +10,9 @@ Description
 
 <a href='https://forties.herokuapp.com/' live link>
 
-<h2>User stiries</h2>
+<h2>User stories</h2>
 
-    <ul>
+    
     
     As a user, I would like to view the blog posts on the site
     As a user, I would like to comment on blog posts
@@ -24,13 +24,19 @@ Description
     As a writer, I would like to delete comments that I find insulting or degrading.
     As a writer, I would like to update or delete blogs I have created.
 
-    <ul>
+    
 
 
 |       Behaviour               |                   Input          |                 Output          |
-|:On page load                  |: On page load                    |:  View the welcome page, Posts :|  |: Select SignUp                |:   Username, password,email      |:  Register.ConfirmationLink    :|  |:Email Confirmation Link       |: Validate Email Address          |:  Login                        :|
+
+|:On page load                  |: On page load                    |:  View the welcome page, Posts :|  
+
+|: Select SignUp                |: Username, password,email        |:  Register.ConfirmationLink    :|
+
 |:Confirmed User, Client, Writer|: Profile, Post, Comment          |:  Update&Comment Profile       :|
+
 |:Submit                        |: Profile, Post,Comment           |:  Submitted                    :|
+
 
 <h3>Development Installation</h3>
     To get the code..
