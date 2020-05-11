@@ -64,12 +64,12 @@ python3.7 manage.py test
 
     Open the application on your browser 127.0.0.1:5000.
 
-<h3>Known Bugs</h3>
+Known Bugs
      
     There are no known bugs
 
 
-<h3>Contact Info</h3>
+Contact Info
     Dankariuki0101@gmail.com
 
 Licence: MIT Licence
