@@ -1,5 +1,12 @@
+import dotenv
 import os
+
+# import dj_database_url
+
 basedir = os.path.abspath(os.path.dirname(__file__))
+dotenv_file = os.path.join(basedir, '.env')
+if os.path.isfile(dotenv_file):
+    dotenv.load_dotenv(dotenv_file)
 
 
 class Config:
